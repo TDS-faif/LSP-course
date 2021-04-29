@@ -6,6 +6,11 @@
 #include <string.h>
 int main(int argc, char **argv)
 {
+	if(argc<2)
+	{
+		std::cout << "There is no expression as an argument of the program." << std::endl;
+		return 0;
+	}
 	char expression[100];
 	sprintf(expression, "%s\n", argv[1]);
 	int pipe_child[2];
