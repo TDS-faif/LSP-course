@@ -22,9 +22,8 @@ int main(int argc, char **argv)
 		return 0;
 	}
 
-	file_content = (char *) mmap(0, file_stats.st_size, PROT_READ, MAP_PRIVATE, fd, 0); //Extract the content of the file
+	file_content = (char *) mmap(0, file_stats.st_size, PROT_READ, MAP_SHARED, fd, 0); //Extract the content of the file
 	
-	printf("%s", file_content);
-
+	fwrite(file_content, file_stats.st_size, sizeof(file_content), stdout);
 	return 0;
 }
