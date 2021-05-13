@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include <fcntl.h>
-#include <sys/types.h>
 #include <sys/stat.h>
-#include <unistd.h>
-#include <sys/io.h>
 #include <sys/mman.h>
 
 int main(int argc, char **argv)
 {
-	if(argc < 1)
+	if(argc < 2)
 	{
 		printf("file name not specified when executing the program\n");
 		return 0;
