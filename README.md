@@ -1,2 +1,1 @@
-This readme provided you with no meaningful information
-Some change to test the SSH-key
+Задачи от лабораторни упражнения и някои тестове от лекциите
