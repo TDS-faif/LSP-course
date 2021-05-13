@@ -24,6 +24,6 @@ int main(int argc, char **argv)
 
 	file_content = (char *) mmap(0, file_stats.st_size, PROT_READ, MAP_SHARED, fd, 0); //Extract the content of the file
 	
-	fwrite(file_content, file_stats.st_size, sizeof(file_content), stdout);
+	fwrite(file_content, file_stats.st_size, sizeof(char), stdout);
 	return 0;
 }
