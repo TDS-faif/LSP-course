@@ -2,6 +2,7 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
+#include <unistd.h>
 
 int main(int argc, char **argv)
 {
@@ -23,6 +24,13 @@ int main(int argc, char **argv)
 	}
 
 	file_content = (char *) mmap(0, file_stats.st_size, PROT_READ, MAP_SHARED, fd, 0); //Extract the content of the file
+	
+	/*printf("PID = %d\n", getpid());
+	for(int i=0; i<file_stats.st_size; i++)
+	{
+		printf("\t%p\n", file_content+i);
+	}
+	getchar();*/
 	
 	fwrite(file_content, file_stats.st_size, sizeof(char), stdout);
 	return 0;
