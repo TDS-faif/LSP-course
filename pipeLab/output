@@ -1,0 +1,20 @@
+execve("./pipedCalc.static", ["./pipedCalc.static", "2+3"], 0x7ffe8d5ee9e8 /* 65 vars */) = 0
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe424c3090) = -1 EINVAL (Invalid argument)
+brk(NULL)                               = 0x1663000
+brk(0x1663d80)                          = 0x1663d80
+arch_prctl(ARCH_SET_FS, 0x1663380)      = 0
+uname({sysname="Linux", nodename="smbd-x570gamingx", ...}) = 0
+readlink("/proc/self/exe", "/home/smbd/Projects/MM/lsp-cours"..., 4096) = 55
+brk(0x1684d80)                          = 0x1684d80
+brk(0x1685000)                          = 0x1685000
+mprotect(0x4ac000, 16384, PROT_READ)    = 0
+pipe([3, 4])                            = 0
+pipe([5, 6])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x1663650) = 36480
+write(6, "2+3\n", 4)                    = 4
+read(3, "5\n", 1000)                    = 2
+newfstatat(1, "", {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x3), ...}, AT_EMPTY_PATH) = 0
+write(1, "5\n", 2)                      = 2
+write(1, "\n", 1)                       = 1
+exit_group(0)                           = ?
++++ exited with 0 +++

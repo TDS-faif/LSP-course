@@ -8,7 +8,7 @@ int main(int argc, char **argv)
 {
 	if(argc<2)
 	{
-		std::cout << "There is no expression as an argument of the program." << std::endl;
+		printf("There is no expression as an argument of the program.\n");
 		return 0;
 	}
 	char expression[100];
